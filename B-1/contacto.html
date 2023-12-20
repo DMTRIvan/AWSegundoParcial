@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./recursos/css/estilos.css" />
+        <title>Electrónicos</title>
+    </head>
+    <body>
+        <header class="cabecera">
+            <h1 class="cabecera__titulo">ELECTRONICOS</h1>
+            <nav class="menu-principal">
+                <!-- menu -->
+                <a href="index.html" class="menu-principal__enlace">Inicio</a>
+                <a href="contacto.html" class="menu-principal__enlace">Contacto </a>
+            </nav>
+        </header>
+        <main class="cuerpo">
+            <figure class="cuerpo__figure">
+                <!-- imagen -->
+
+                <!-- alt lago ??? -->
+                <img
+                    class=""
+                    src="./recursos/imagenes/computadora2.jpg"
+                    alt="lago"
+                />
+
+                
+            </figure>
+            <section>
+                <header class="cuerpo-cabecera">
+                    <h2 class="cuerpo-cabecera__titulo">Contacto</h2>
+                    <p>Estamos para ayudarle!</p>
+                </header>
+                <form class="form" action="./contacto.html" method="post">
+                   
+                    <label for="nombre"> Nombre: </label>
+                    <input type="text" name="nombre" id="nombre" required placeholder = "Ej: Juan Perez"/>
+                   
+                     <label for="id-email">Email</label>
+                    <input
+                        id="id-email"
+                        type="email"
+                        placeholder="email@email.com"
+                        required
+                        name="email"
+                    />
+                    <label for="id-consulta">Consulta</label>
+                    <textarea
+                        id="id-consulta"
+                        cols="30"
+                        rows="10"
+                        required
+                        name="consulta"
+                    ></textarea>
+                    <button type="submit">Enviar consulta</button>
+                </form>
+            </section>
+        </main>
+        <footer class="pie">
+            <h5>AW1</h5>
+        </footer>
+    </body>
+</html>

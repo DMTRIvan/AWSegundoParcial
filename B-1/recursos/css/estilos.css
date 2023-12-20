@@ -1,0 +1,227 @@
+/**************************************/
+/* GENERALES **************************/
+/**************************************/
+
+/* modelo de caja */
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    /* layout */
+    --cabecera: linear-gradient(90deg, #393575 0%, #090979 35%, #00d4ff 100%);
+    --pie: #393575;
+
+    /* fuentes */
+    font-family: Arial;
+    /* tamaño */
+    font-size: 18px;
+}
+/* limpiar relleno y margen */
+html,
+body,
+h1,
+h3,
+h5,
+figure,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/**/
+html,
+body {
+    height: 100%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+}
+/**************************************/
+/* layout *****************************/
+/**************************************/
+.cabecera {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-block: 10px;
+    gap: 20px;
+    background: var(--cabecera);
+}
+.cabecera__titulo {
+    color:#ffffff;
+}
+.cuerpo {
+    flex-grow: 1;
+    padding-block: 0 40px;
+}
+.cuerpo__figure {
+    width: 100%;
+}
+.cuerpo__figure > img {
+    width: 100%;
+    min-height: 200px;
+    object-fit: cover;
+    object-position: center;
+}
+.cuerpo-cabecera {
+    padding-block: 10px;
+    margin-block: 10px;
+    border-bottom: 2px solid #333;
+}
+.cuerpo-cabecera__titulo {
+   text-align: center;
+}
+/* parrafo 
+NO ES BEM
+*/
+
+.cuerpo-cabecera p {
+    padding: 10px;
+    color: #fff;
+    font-size: 1.3rem;
+    text-align: center;
+    background-color: #333;
+
+}
+
+
+.pie {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height:100px;
+    padding-block: 10px;
+    
+    background-color: var(--pie);
+    color: #fff;
+    text-align: center;
+}
+/* barra navegacion principal **********************/
+.menu-principal {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    min-height:80px;
+    gap: 20px;
+}
+.menu-principal__enlace {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    color: #ffffff;
+    text-decoration: none;
+}
+.menu-principal__enlace:hover {
+    color: #333333;
+    text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+    .cabecera {
+        flex-direction: row;
+        justify-content: space-between;
+        padding-inline: 10%;
+    }
+    .cuerpo{
+        padding-inline: 10%;
+    }
+    .pie{
+        padding-inline: 10%;
+    }
+}
+/**************************************/
+/* Artículos (index.html) *************/
+/**************************************/
+.contenedor-productos {
+    display: flex;
+    flex-wrap: wrap;
+}
+.producto {
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+    width: 100%;
+    padding: 10px;
+    margin-block-end: 25px;
+}
+.producto:hover .producto__fig > img {
+   transform: scale(1.07);
+}
+.producto__datos {
+    display:flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-block: 10px;
+    text-align: center;
+}
+.producto__fig {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.producto__fig > img {
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+    object-position: center;
+    transition: all 0.2s ease-in-out;
+}
+@media (min-width: 768px) {
+    .producto {
+        width: 50%;
+    }
+}
+
+/* media query productos > 1024px */
+
+@media (min-width: 1024px ) {
+    .producto {
+        width: 25%;
+    }
+}
+
+/**************************************/
+/* Contacto (contacto.html) ***********/
+/**************************************/
+
+.form {
+    display: flex;
+    flex-direction: column;
+    padding-inline: 10%;
+    margin-block-end: 40px;
+}
+.form label,
+.form input,
+.form textarea {
+    font-size: inherit;
+    font-family: inherit;
+    padding-block: 10px;
+    padding-inline: 5px;
+    margin-block-end: 10px;
+}
+.form input {
+    border: 1px solid #333;
+}
+.form textarea {
+    border: 1px solid #333;
+    min-height: 300px;
+}
+.form button {
+    font-size: inherit;
+    color: #ffffff;
+    background-color: #333333;
+    padding-block: 20px;
+    margin-block-start: 15px;
+    border-radius: 6px;
+    border: none;
+}
+@media (min-width: 768px) {
+    .form {
+        padding-inline: 20%;
+    }
+}
